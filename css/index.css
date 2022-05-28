@@ -141,7 +141,6 @@ ol[role="list"] {
   margin: 1.5rem 0;
 }
 /*=== NAVBAR  ===*/
-
 nav {
   width: 100vw;
   min-height: 50px;
@@ -213,8 +212,27 @@ nav {
   color: hsl(var(--color-dark-100));
 }
 
-/*=== HEADER SECTION ===*/
+.CTA label {
+  position: relative;
+}
 
+.CTA i {
+  position: absolute;
+  top: 12px;
+  width: 1rem;
+  left: 5%;
+  opacity: 0.3;
+}
+
+.CTA input {
+  background-color: red;
+}
+
+#city {
+  padding-left: 2rem;
+}
+
+/*=== HEADER SECTION ===*/
 .header__container {
   padding-top: 10rem;
   min-height: 100vh;
@@ -368,7 +386,6 @@ nav {
 }
 
 /*=== WHAT WE OFFER SECTION ===*/
-
 .offers__container {
   display: flex;
   justify-content: space-between;
@@ -453,7 +470,6 @@ nav {
 }
 
 /*=== VISIONS SECTION ===*/
-
 .visions__section {
   position: relative;
 }
@@ -537,7 +553,6 @@ nav {
 /*****************************************/
 /*=== PROJECTS & TESTIMONIALS SECTION ===*/
 /*****************************************/
-
 .projects__container .section__info,
 .testimonials__container .section__info {
   display: flex;
@@ -587,7 +602,6 @@ nav {
 }
 
 /*=== PROJECTS ===*/
-
 .project-filters {
   display: flex;
   justify-content: space-evenly;
@@ -689,7 +703,6 @@ nav {
 }
 
 /*=== TESTIMONIALS ===*/
-
 .swiper-testimonials {
   position: relative;
   margin: 0 10%;
@@ -857,6 +870,29 @@ nav {
   justify-content: space-between;
 }
 
+.footer__social-media {
+  display: inline-flex;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+.footer__social-media i {
+  color: hsl(var(--color-dark-100));
+  font-size: 2rem;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.footer__social-media i:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -ms-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+}
+
 .footer__container-item:nth-child(2) {
   display: flex;
   flex-direction: row;
@@ -869,14 +905,10 @@ nav {
   justify-content: space-between;
 }
 
-.footer__container-item h5 {
-  color: hsl(var(--color-dark-100));
-  margin-top: auto;
-}
-
 .footer__container-item h4 {
   color: hsl(var(--color-dark-100));
   margin-bottom: 2rem;
+  margin-right: 1.5rem;
 }
 
 .footer__container-item ul {
@@ -895,8 +927,6 @@ nav {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
-}
-.footer__container-item ul li:hover {
 }
 
 /* ANIMATED DASH UNDER THE LINK*/
@@ -930,6 +960,12 @@ nav {
 .footer__container-item ul li a:hover {
   color: hsl(var(--color-accent));
   border-bottom: 1px solid hsl(var(--color-accent));
+}
+
+.privacy,
+.terms {
+  color: hsl(var(--color-dark-100));
+  margin-top: auto;
 }
 
 .copyright {
@@ -1012,7 +1048,9 @@ nav {
     justify-content: center;
   }
 
-  /*=== SERVICES & SOLUTION SECTION ===*/
+  /*****************************************/
+  /*=== SERVICES & SOLUTIONS SECTION ===*/
+  /*****************************************/
   .services__container,
   .solutions__container {
     flex-direction: column;
@@ -1088,7 +1126,7 @@ nav {
     max-width: 95%;
   }
 
-  /*=== VISIONS SECTION ===*/
+  /*=== TESTIMONIALS SECTION ===*/
   .testimonial__slider-prev {
     position: absolute;
     left: 5%;
@@ -1097,6 +1135,50 @@ nav {
   .testimonial__slider-next {
     position: absolute;
     right: 5%;
+  }
+
+  /*=== FOOTER SECTION ===*/
+  .footer__container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer__container-item {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 10vh;
+  }
+
+  .footer__container-item:nth-child(1) {
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+    padding: 0;
+  }
+
+  .footer__container-item:nth-child(2) {
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+
+  .footer__container-item:nth-child(2) div {
+    display: inline-flex;
+    align-items: baseline;
+    min-width: 8rem;
+  }
+
+  .footer__container-item:nth-child(2) div ul {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0;
+    font-size: 1em;
+  }
+
+  .terms,
+  .privacy {
+    margin-top: 2rem;
   }
 }
 
@@ -1155,9 +1237,6 @@ nav {
     max-width: 500px;
   }
 
-  .header__img img {
-  }
-
   .work__sample {
     left: 7%;
     top: 18%;
@@ -1210,6 +1289,18 @@ nav {
     position: absolute;
     bottom: -15%;
     right: 35%;
+  }
+
+  /*=== FOOTER SECTION ===*/
+
+  .footer__section > img {
+    top: -5%;
+  }
+
+  .terms,
+  .privacy {
+    margin-top: 1rem;
+    z-index: 5;
   }
 }
 
